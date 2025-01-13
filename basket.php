@@ -94,7 +94,7 @@
                 <tfoot>
                     <tr>
                         <td colspan='3' class='text-end'><strong>Total:</strong></td>
-                        <td><strong>&pound ".number_format($total,2)."</strong></td>
+                        <td><strong>&pound".number_format($total,2)."</strong></td>
                         <td></td>
                     </tr>
                 </tfoot>

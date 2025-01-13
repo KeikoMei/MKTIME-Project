@@ -42,9 +42,9 @@
             <div class="card border-secondary">
                 <div class="card-body">
                     <h5 class="card-title text-success">Item Updated</h5>
-                    <p class="card-text">Another <strong>' . htmlspecialchars($row["item_name"]) . '</strong> has been added to your cart.</p>
+                    <p class="card-text">Another <strong>' . $row["item_name"] . '</strong> has been added to your cart.</p>
                     <a href="products.php" class="btn btn-secondary">Continue Shopping</a>
-                    <a href="cart.php" class="btn btn-dark">View Your Cart</a>
+                    <a href="basket.php" class="btn btn-dark">View Your Basket</a>
                 </div>
             </div>
         </div>';
@@ -56,7 +56,7 @@
             <div class="card border-secondary">
                 <div class="card-body">
                     <h5 class="card-title text-success">Item Added</h5>
-                    <p class="card-text">A <strong>' . htmlspecialchars($row["item_name"]) . '</strong> has been added to your basket.</p>
+                    <p class="card-text">A <strong>' . $row["item_name"] . '</strong> has been added to your basket.</p>
                     <a href="products.php" class="btn btn-secondary">Continue Shopping</a>
                     <a href="basket.php" class="btn btn-dark">View Your Basket</a>
                 </div>
