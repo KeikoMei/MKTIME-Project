@@ -40,7 +40,8 @@
                             $first_name = isset($_SESSION['first_name']) ? $_SESSION['first_name'] : '';
                             $last_name = isset($_SESSION['last_name']) ? $_SESSION['last_name'] : '';
                             echo '<li class="nav-item"><span class="nav-link text-light ms-3">Welcome, ' . htmlspecialchars($first_name) . ' ' . htmlspecialchars($last_name) . '</span></li>';
-
+                            echo '<li class="nav-item"><a class="nav-link" href="/codespace/MKTIME/basket.php"><i class="bi bi-cart3"></i></a></li>';
+                            
                             echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
 
                            

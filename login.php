@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - MKTIME</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 <body>
     <!-- Navbar -->
@@ -19,7 +21,7 @@
     {
         echo '<div class="alert alert-danger text-center" role="alert">';
         echo '<h4 class="alert-heading">There was a problem:</h4>';
-        echo '<ul class="list-unstyled">'; // Removes default bullet styling
+        echo '<ul class="list-unstyled">'; 
         foreach ($errors as $msg) 
         { 
             echo "<li>$msg</li>"; 

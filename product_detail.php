@@ -22,6 +22,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details - MKTIME</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 <body>
     <!-- Navbar -->
@@ -40,7 +42,7 @@
                 <p class="text-muted">Category: <strong><?php echo $row['category']; ?></strong></p>
                 <p class="lead"><?php echo $row['item_desc']; ?></p>
                 <h3 class="mb-4">£<?php echo $row['item_price']; ?></h3>
-                <button class="btn btn-dark btn-lg w-100">Add to Cart</button>
+                <a href='added.php?id=<?php echo $row['item_id']; ?>' class="btn btn-dark btn-lg w-100">Add to basket</a>
             </div>
         </div>
     </div>
