@@ -109,11 +109,6 @@
                 mysqli_close( $link );
             }  
 
-
-       
-
-
-
         }
 ?>
     <!-- Register Form -->

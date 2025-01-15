@@ -1,15 +1,20 @@
 <?php
    //session_start() ;
    
+    # Include database connection configuration
     require ('include/connect_db.php');
 
+    # Check if product ID exists in URL parameters
     if (isset($_GET['id'])) $id = $_GET['id'];
 
+    # Construct and execute query to fetch product details
     $query = "SELECT * FROM products WHERE item_id = $id";
     $result = mysqli_query($link, $query);
 
+    # Verify exactly one product was found
     if ( mysqli_num_rows( $result ) == 1 ) 
     {
+        # Fetch product data into associative array
         $row = mysqli_fetch_array( $result, MYSQLI_ASSOC );
         // Product details are fetched and stored in $row
     }

@@ -7,7 +7,7 @@ describe('MKTIME Tests', () => {
       cy.contains('Welcome to MKTIME'); 
   });
 
-  //Test  Login
+  //Test Login
   it('Logs in successfully', () => {
       cy.visit(`${baseUrl}/login.php`); // go to the login page
 
@@ -44,7 +44,7 @@ describe('MKTIME Tests', () => {
       cy.get('.nav-item.dropdown').contains('Our Collection').click();
       cy.get('.dropdown-item').contains('All products').click(); // Click on "Products"
 
-      cy.get('input[name="email"]').type('test@test'); 
+      cy.get('input[name="email"]').type('test@test'); //login
       cy.get('input[name="pass"]').type('test'); 
 
       // Submit the form
@@ -59,11 +59,12 @@ describe('MKTIME Tests', () => {
   it('Adds a product to the basket', () => {
     cy.visit(`${baseUrl}/products.php`); // Visit the products page
 
-    cy.get('input[name="email"]').type('test@test'); 
+    cy.get('input[name="email"]').type('test@test'); //login
     cy.get('input[name="pass"]').type('test'); 
 
     // Submit the form
     cy.get('button[type="submit"]').click();
+
     cy.get('.btn').contains('Add to basket').first().click(); // Click the first "Add to Cart" button
     cy.get('.card-text').should('contain', 'has been added to your basket'); // Verify success message
   });
@@ -71,11 +72,13 @@ describe('MKTIME Tests', () => {
   // Test Cart Functionality
   it('Shows items in the basket', () => {
     cy.visit(`${baseUrl}/products.php`); // Visit the products page
-    cy.get('input[name="email"]').type('test@test'); 
+
+    cy.get('input[name="email"]').type('test@test'); //login
     cy.get('input[name="pass"]').type('test'); 
 
     // Submit the form
     cy.get('button[type="submit"]').click();
+
     cy.get('.btn').contains('Add to basket').first().click(); // Click the first "Add to Cart" button
     cy.visit(`${baseUrl}/basket.php`); // Visit the basket page
     cy.contains('Your Shopping Basket'); // Ensure the cart page loads
@@ -86,11 +89,12 @@ describe('MKTIME Tests', () => {
   // Test Checkout Process
   it('Processes checkout successfully', () => {
     cy.visit(`${baseUrl}/products.php`); // Visit the products page
-    cy.get('input[name="email"]').type('test@test'); 
+    cy.get('input[name="email"]').type('test@test'); //login
     cy.get('input[name="pass"]').type('test'); 
 
     // Submit the form
     cy.get('button[type="submit"]').click();
+    
     cy.get('.btn').contains('Add to basket').first().click(); // Click the first "Add to Cart" button
     cy.visit(`${baseUrl}/basket.php`); // Visit the basket page
     cy.get('.btn').contains('Checkout Now').click(); // Click the first "Add to Cart" button
