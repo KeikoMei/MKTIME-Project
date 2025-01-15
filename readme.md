@@ -68,7 +68,7 @@ The objective of this project is to develop a dynamic eCommerce website named MK
 ![Product Page Screenshot](image/screenshots/products.png)
 
 ### **Shopping Cart**
-![Shopping Cart Screenshot](image/screenshots/shopping basket.png)
+![Shopping Cart Screenshot](image/screenshots/shopping_basket.png)
 
 ### **Registration Page**
 ![Checkout Page Screenshot](image/screenshots/register.png)
